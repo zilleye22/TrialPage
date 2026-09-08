@@ -1,9 +1,225 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>My GitHub Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Helix — a flexible, block-based theme built for modern commerce.">
+  <title>Helix — Ecommerce Website Template</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, World! Welcome to my website.</h1>
+  <header class="site-header" id="siteHeader">
+    <div class="nav container">
+      <a class="brand" href="#">
+        <span class="brand-mark">S</span><span>Shopify Theme Store</span>
+      </a>
+      <div class="desktop-nav">
+        <button class="nav-link dropdown-toggle" aria-expanded="false">Browse themes <span>⌄</span></button>
+        <div class="dropdown">
+          <a href="#overview">All themes</a>
+          <a href="#features">Large catalogs</a>
+          <a href="#features">Small catalogs</a>
+          <a href="#features">Free themes</a>
+          <a href="#presets">Trending this week</a>
+          <a href="#release">New themes</a>
+          <a href="#presets">Horizon themes</a>
+        </div>
+        <button class="icon-btn search-open" aria-label="Search">⌕</button>
+        <button class="account" aria-label="Open account menu"><span>Cor</span></button>
+      </div>
+      <div class="mobile-nav">
+        <button class="icon-btn search-open" aria-label="Search">⌕</button>
+        <button class="icon-btn menu-open" aria-label="Open navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-box">
+      <input id="searchInput" type="search" placeholder="Search by feature, style, or designer" autocomplete="off">
+      <button class="search-close">Close</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <button class="drawer-close">×</button>
+    <nav>
+      <a href="#overview">All themes</a>
+      <a href="#features">Large catalogs</a>
+      <a href="#features">Small catalogs</a>
+      <a href="#features">Free themes</a>
+      <a href="#presets">Trending this week</a>
+      <a href="#release">New themes</a>
+      <a href="#presets">Horizon themes</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="demo-toolbar">
+          <div></div>
+          <div class="device-switch">
+            <button class="device active" data-mode="desktop">▣</button>
+            <button class="device" data-mode="mobile">▯</button>
+            <button class="maximize" aria-label="Maximize preview">⛶</button>
+          </div>
+          <a class="btn btn-light" href="#overview">Try theme</a>
+        </div>
+        <div class="preview-frame" id="previewFrame">
+          <img id="heroPreview" src="https://cdn.shopify.com/theme-store/8q7q9ma984af6dg4vjxx35gipzrg.jpg?width=1600" alt="Helix theme preview">
+          <button class="preview-overlay" id="openPreview">View demo</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="details-bar" id="detailsBar">
+      <div class="container details-inner">
+        <div>
+          <h1>Helix</h1>
+          <div class="sub-details">$250 USD <span>•</span> <span>♡</span> 0%</div>
+        </div>
+        <nav class="section-nav">
+          <a href="#overview">Overview</a>
+          <a href="#features">Features</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#release">Support</a>
+        </nav>
+        <div class="detail-actions">
+          <button class="btn btn-secondary" id="viewDemo">View demo</button>
+          <button class="btn btn-primary" id="tryTheme">Try theme</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="title-row">
+          <div>
+            <h2 class="display">Helix <span class="price">$250 <small>USD</small></span></h2>
+            <div class="lead-row">
+              <p>A flexible, block-based theme built for modern commerce</p>
+              <span>by <a href="#release">ModuTheme</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="feature-showcase">
+          <article class="showcase-card">
+            <button class="image-button" data-image="https://cdn.shopify.com/theme-store/rj4qg3ja6glmkga8bx0r8nd8f2zg.jpg" data-title="Flexible store layouts">
+              <img src="https://cdn.shopify.com/theme-store/rj4qg3ja6glmkga8bx0r8nd8f2zg.jpg" alt="Flexible store layouts">
+              <span class="zoom">⌕</span>
+            </button>
+            <h3>Flexible store layouts</h3>
+            <p>Fully built with theme blocks and custom sections, enabling flexible layouts that evolve with your store.</p>
+          </article>
+          <article class="showcase-card">
+            <button class="image-button" data-image="https://cdn.shopify.com/theme-store/ey9pjx7p507jx5lsrfpawrk4s6f8.jpg" data-title="Optimized for mobile shopping">
+              <img src="https://cdn.shopify.com/theme-store/ey9pjx7p507jx5lsrfpawrk4s6f8.jpg" alt="Optimized for mobile shopping">
+              <span class="zoom">⌕</span>
+            </button>
+            <h3>Optimized for mobile shopping</h3>
+            <p>Built for mobile shoppers with smooth navigation and easy buying, making browsing and purchasing more comfortable.</p>
+          </article>
+          <article class="showcase-card">
+            <button class="image-button" data-image="https://cdn.shopify.com/theme-store/rbyo6huedthywzjwcjzvmoyi03ce.jpg" data-title="Optimized for speed">
+              <img src="https://cdn.shopify.com/theme-store/rbyo6huedthywzjwcjzvmoyi03ce.jpg" alt="Optimized for speed">
+              <span class="zoom">⌕</span>
+            </button>
+            <h3>Optimized for speed</h3>
+            <p>Pages are built to load quickly, helping stores stay smooth and responsive during everyday browsing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="included"><span>WHAT'S INCLUDED</span></div>
+
+    <section class="section" id="features">
+      <div class="container">
+        <h2>Features</h2>
+        <div class="feature-grid" id="featureGrid"></div>
+      </div>
+    </section>
+
+    <section class="dark-section">
+      <div class="container dark-grid">
+        <div>
+          <span class="eyebrow">CRAFTED FOR COMMERCE</span>
+          <h2>The world’s best online stores use Shopify themes</h2>
+        </div>
+        <dl>
+          <div><dt>Future proof</dt><dd>Regularly updated and always works with the newest Shopify features.</dd></div>
+          <div><dt>Play before you pay</dt><dd>Customize until you love it. Only pay when you publish.</dd></div>
+          <div><dt>Blazing fast checkout</dt><dd>Speed-tested so your customers check out in record time.</dd></div>
+          <div><dt>Keep it forever</dt><dd>One-time payment, lifetime license for your store. No expiration.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="presets">
+      <div class="container presets-head">
+        <div>
+          <div class="stack-icon">▱</div>
+          <h2>Presets</h2>
+          <p>Helix comes with 4 ready-made designs for your store</p>
+        </div>
+        <div class="preset-stack" id="presetStack"></div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <h2>Reviews</h2>
+        <div class="review-empty">
+          <p>No reviews yet</p>
+          <button class="btn btn-secondary" id="reviewBtn">Write a review</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section release" id="release">
+      <div class="container release-grid">
+        <div>
+          <h2>Designed by ModuTheme</h2>
+          <div class="button-row">
+            <a class="btn btn-secondary" href="https://modutheme.ticksy.com/" target="_blank" rel="noopener">Get support</a>
+            <a class="btn btn-secondary" href="#presets">All themes</a>
+          </div>
+        </div>
+        <div>
+          <h3>Version 1.1.0 <span>•</span> September 03, 2026</h3>
+          <p>We've added a new Elvara preset, two new sections, hover zoom and new button controls, and a round of accessibility and bug fixes.</p>
+          <div class="links"><a href="#" class="version-details">View details</a><a href="#release">All versions</a></div>
+          <h3 class="doc-title">Theme documentation</h3>
+          <p><a href="https://modutheme.gitbook.io/helix/" target="_blank" rel="noopener">View details ↗</a></p>
+          <address>My Dinh, Ha Noi, 100000, VN<br>contact@modutheme.com</address>
+        </div>
+      </div>
+    </section>
+
+    <section class="section more-themes">
+      <div class="container">
+        <div class="carousel-head">
+          <h2>More themes for shoes</h2>
+          <button class="btn btn-secondary" id="viewAll">View all</button>
+        </div>
+        <div class="theme-carousel" id="themeCarousel"></div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="imageModal">
+    <button class="modal-close">×</button>
+    <img id="modalImage" src="" alt="">
+  </dialog>
+
+  <dialog id="demoModal" class="demo-modal">
+    <button class="modal-close">×</button>
+    <img src="https://cdn.shopify.com/theme-store/8q7q9ma984af6dg4vjxx35gipzrg.jpg?width=2400" alt="Helix demo">
+  </dialog>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
 </body>
 </html>
